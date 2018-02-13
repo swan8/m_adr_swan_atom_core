@@ -1,0 +1,13 @@
+dependencies {
+
+    implementation "${square.Retrofit}"
+    implementation "${square.Retrofit_Adapter}"
+    implementation "${square.Retrofit_Jackson}"
+    implementation "${square.Okhttp_Logging}"
+
+    implementation "${ReactiveX.RxAndroid}"
+    implementation "${ReactiveX.RxKotlin}"
+
+    implementation "${mainDependenices.Kotlin}"
+    implementation "${supportDependencies.supportAppcompatV7}"
+}

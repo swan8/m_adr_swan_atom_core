@@ -1,0 +1,55 @@
+ext {
+
+    novodaPublish = [
+            
+            userOrg                         : "stephen6",
+            groupId                         : "swan.atom",
+            artifactId                      : "core",
+            publishVersion                  : "0.0.1",
+            desc                            : "core lib for swan",
+            website                         : "https://gitee.com/g_paizxin/Swan_Atom_Core",
+            licences                        : "Apache-2.0",
+    ]
+
+    libVersions = [
+            
+            Ver_Android_Support             : "27.0.2",
+            Ver_Android_Support_Constraint  : "1.0.2",
+            VER_Android_Support_Multidex    : "1.0.0",
+
+            Ver_Kotlin                      : "${kotlin_version}"
+    ]
+
+    mainDependenices = [
+
+            Kotlin                          : "org.jetbrains.kotlin:kotlin-stdlib:${libVersions.Ver_Kotlin}"
+    ]
+
+    supportDependencies = [
+            supportAppcompatV7              : "com.android.support:appcompat-v7:${libVersions.Ver_Android_Support}",
+            supportRecyclerView             : "com.android.support:recyclerview-v7:${libVersions.Ver_Android_Support}",
+            supportV4                       : "com.android.support:support-v4:${libVersions.Ver_Android_Support}",
+            supportV4Compat                 : "com.android.support:support-compat:${libVersions.Ver_Android_Support}",
+            supportV4CoreUI                 : "com.android.support:support-core-ui:${libVersions.Ver_Android_Support}",
+            supportV4Fragment               : "com.android.support:support-fragment:${libVersions.Ver_Android_Support}",
+            supportAnnotation               : "com.android.support:support-annotations:${libVersions.Ver_Android_Support}",
+            supportDesign                   : "com.android.support:design:${libVersions.Ver_Android_Support}",
+            supportConstraintLayout         : "com.android.support.constraint:constraint-layout:${libVersions.Ver_Android_Support_Constraint}",
+            supportMultidex                 : "com.android.support:multidex:${libVersions.VER_Android_Support_Multidex}"
+    ]
+
+    square = [
+            Retrofit                        : "com.squareup.retrofit2:retrofit:2.3.0",
+            Retrofit_Adapter                : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+            Retrofit_Jackson                : "com.squareup.retrofit2:converter-jackson:2.3.0",
+
+            Okhttp_Logging                  : "com.squareup.okhttp3:logging-interceptor:3.4.1"
+    ]
+
+    ReactiveX = [
+            RxJava                          : "io.reactivex:rxjava:1.3.5",
+            RxAndroid                       : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            RxKotlin                        : "io.reactivex.rxjava2:rxkotlin:2.2.0"
+    ]
+
+}
