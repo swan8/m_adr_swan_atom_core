@@ -4,7 +4,7 @@ ext {
             
             userOrg                         : "stephen6",
             groupId                         : "swan.atom",
-            artifactId                      : "core",
+            artifactId                      : "atomCore",
             publishVersion                  : "0.0.1",
             desc                            : "core lib for swan",
             website                         : "https://gitee.com/g_paizxin/Swan_Atom_Core",
