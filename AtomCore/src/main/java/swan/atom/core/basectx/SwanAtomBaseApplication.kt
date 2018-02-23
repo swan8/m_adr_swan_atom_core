@@ -20,8 +20,8 @@ class SwanAtomBaseApplication: Application() {
     }
 
     private fun initImpl() {
-        for (i in module.indices) {
-            var clazz: Class<*>? = Class.forName(module[i])
+        module.map {
+            val clazz: Class<*>? = Class.forName(it)
             val newInstance: Any? = clazz?.newInstance()
             if (newInstance is SwanAtomApplicationImpl) {
                 newInstance.onCreate(this)

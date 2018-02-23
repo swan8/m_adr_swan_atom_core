@@ -5,7 +5,7 @@ ext {
             userOrg                         : "stephen6",
             groupId                         : "swan.atom",
             artifactId                      : "atomCore",
-            publishVersion                  : "0.0.1",
+            publishVersion                  : "0.1.0",
             desc                            : "core lib for swan",
             website                         : "https://gitee.com/g_paizxin/Swan_Atom_Core",
             licences                        : "Apache-2.0",
