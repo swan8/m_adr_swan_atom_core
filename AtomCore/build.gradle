@@ -1,12 +1,14 @@
 apply plugin: 'com.android.library'
 
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
 apply from: "config/dependencies.gradle"
+
+group='com.github.paizxin'
 
 android {
 
