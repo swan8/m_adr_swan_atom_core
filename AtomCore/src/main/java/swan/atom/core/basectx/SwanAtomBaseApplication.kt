@@ -5,12 +5,12 @@ import android.app.Application
 /**
  * Created by stephen on 18-2-13.
  */
-class SwanAtomBaseApplication: Application() {
+open class SwanAtomBaseApplication: Application() {
 
     companion object {
 
         val module: Array<String> = arrayOf(
-                "swam.biz.soccer.SwanSoccerApplicationImpl"
+                "swan.biz.soccer.SwanSoccerApplicationImpl"
         )
     }
 
