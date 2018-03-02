@@ -5,17 +5,20 @@ import android.app.Application
 /**
  * Created by stephen on 18-2-13.
  */
-open class SwanAtomBaseApplication: Application() {
+open abstract class SwanAtomBaseApplication: Application() {
 
     companion object {
 
-        val module: Array<String> = arrayOf(
-                "swan.biz.soccer.SwanSoccerApplicationImpl"
-        )
+        private val module: MutableList<String> = mutableListOf()
     }
+
+    abstract fun initModuleApplicationImpl(module: MutableList<String>)
 
     override fun onCreate() {
         super.onCreate()
+
+        initModuleApplicationImpl(module)
+
         initImpl()
     }
 
