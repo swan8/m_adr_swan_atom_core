@@ -2,20 +2,20 @@ package swan.atom.core
 
 import android.app.Application
 import android.content.Context
-import swan.atom.core.basectx.SwanAtomApplicationImpl
+import swan.atom.core.basectx.SwanAtomBaseApplication
 import java.lang.ref.WeakReference
 
 /**
  * Created by stephen on 18-3-14.
  */
-class AtomCoreApplicationImpl : SwanAtomApplicationImpl {
+class AtomCoreApplicationImpl : SwanAtomBaseApplication.SwanAtomApplicationImpl {
 
     companion object {
         lateinit var instance: AtomCoreApplicationImpl
             private set
 
         fun getContext(): Context? {
-            return instance?.getContext()
+            return instance.getContext()
         }
     }
 
