@@ -1,13 +1,38 @@
 dependencies {
 
-    implementation "${square.Retrofit}"
-    implementation "${square.Retrofit_Adapter}"
-    implementation "${square.Retrofit_Jackson}"
-    implementation "${square.Okhttp_Logging}"
+    api "${google.supportAppcompatV7}"
+    api "${google.supportCardView}"
+    api "${google.supportConstraintLayout}"
+    api "${google.supportDesign}"
 
-    implementation "${ReactiveX.RxAndroid}"
-    implementation "${ReactiveX.RxKotlin}"
+    api "${google.LifeCycleRuntim}"
+    api "${google.LifeCycleExtensions}"
+    annotationProcessor "${google.LifeCycleCompiler}"
 
-    implementation "${mainDependenices.Kotlin}"
-    implementation "${supportDependencies.supportAppcompatV7}"
+    api "${NewKotlin.Kotlin}"
+
+    api "${square.Retrofit}"
+    api "${square.Retrofit_Adapter}"
+    api "${square.Retrofit_Jackson}"
+    api "${square.Retrofit_Scalars}"
+    api "${square.Okhttp_Logging}"
+
+    api "${ReactiveX.RxAndroid}"
+    api "${ReactiveX.RxKotlin}"
+
+    api "${mikePenz.Materialize}"
+    api "${mikePenz.FastAdapter}"
+    api "${mikePenz.FastAdapterCommons}"
+
+    api "${ramotion.CardSlider}"
+
+    api "${nice.Jsoup}"
+    api "${nice.TimberKt}"
+    api "${nice.Croller}"
+    api "${nice.SmoothRefreshLayout}"
+    api "${nice.GreedoLayout}"
+    api "${nice.Fresco}"
+    api "${nice.FrescoOkHttp}"
+
+//    api "${swan.AtomCore}"
 }

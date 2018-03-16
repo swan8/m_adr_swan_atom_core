@@ -1,25 +1,26 @@
 apply plugin: 'com.android.library'
 
-apply plugin: 'com.github.dcendents.android-maven'
-
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
 apply from: "config/dependencies.gradle"
 
-group='com.github.paizxin'
-
 android {
 
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    def ext = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion ext.basic.compileSDK
+    buildToolsVersion ext.basic.buildVersion
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 27
+
+        minSdkVersion ext.basic.minSDK
+        targetSdkVersion ext.basic.targetVersion
+
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -30,13 +31,5 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
-
-    lintOptions {
-        abortOnError false
     }
 }
