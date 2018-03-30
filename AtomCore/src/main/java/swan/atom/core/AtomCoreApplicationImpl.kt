@@ -1,5 +1,6 @@
 package swan.atom.core
 
+import android.app.Application
 import android.content.Context
 import swan.atom.core.base.SwanAtomApplicationImpl
 import java.lang.ref.WeakReference
@@ -7,9 +8,12 @@ import java.lang.ref.WeakReference
 /**
  * Created by stephen on 18-3-14.
  */
-class AtomCoreApplicationImpl : SwanAtomApplicationImpl<AtomCoreApplicationImpl> {
+object AtomCoreApplicationImpl : SwanAtomApplicationImpl {
 
-    override var instance: AtomCoreApplicationImpl = this
+    override lateinit var reference: WeakReference<Context>
 
-    override lateinit var context: WeakReference<Context>
+    override fun onCreate(application: Application) {
+        super.onCreate(application)
+        println("${this}::reference::${this.reference}")
+    }
 }

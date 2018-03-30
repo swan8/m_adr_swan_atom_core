@@ -2,24 +2,23 @@ package swan.atom.core.base
 
 import android.app.Application
 import android.content.Context
+import android.support.v4.content.ContextCompat
 import java.lang.ref.WeakReference
 
 /**
  * Created by stephen on 18-3-30.
  */
-interface SwanAtomApplicationImpl<T : SwanAtomApplicationImpl<T>> {
+interface SwanAtomApplicationImpl {
 
-    var instance: T
-
-    var context: WeakReference<Context>
+    var reference: WeakReference<Context>
 
     fun onCreate(application: Application) {
-        context = WeakReference(application.applicationContext)
+        reference = WeakReference(application.applicationContext)
     }
 
-    fun getContext(): Context? = context.get()
+    fun getContext(): Context? = reference.get()
 
-    fun getColor(id: Int): Int = getContext()?.resources?.getColor(id) ?: 0
+    fun getColor(id: Int): Int = getContext()?.let { ContextCompat.getColor(it, id) } ?: android.R.color.transparent
 
     fun getString(resId: Int, vararg formatArgs: Any): String? = getContext()?.getString(resId, formatArgs)
 
