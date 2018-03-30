@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- common gap for UI -->
+    <dimen name="atom_core_resDimensGapTiny">2dp</dimen>
+    <dimen name="atom_core_resDimensGapSmall">4dp</dimen>
+    <dimen name="atom_core_resDimensGapNormal">8dp</dimen>
+    <dimen name="atom_core_resDimensGapBig">16dp</dimen>
+    <dimen name="atom_core_resDimensGapHuge">24dp</dimen>
+    <dimen name="atom_core_resDimensGapColossal">36dp</dimen>
+    <dimen name="atom_core_resDimensGapGigantic">48dp</dimen>
+    <dimen name="atom_core_resDimensGapTremendous">48dp</dimen>
+</resources>
