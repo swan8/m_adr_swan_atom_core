@@ -1,4 +1,4 @@
-package swam.atom.core.extensions
+package swan.atom.core.extensions
 
 import android.content.Context
 import android.util.TypedValue

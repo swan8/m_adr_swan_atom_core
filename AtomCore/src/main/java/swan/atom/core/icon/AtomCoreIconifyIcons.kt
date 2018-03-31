@@ -1,4 +1,4 @@
-package swan.biz.koala
+package swan.atom.core.icon
 
 import com.joanzapata.iconify.Icon
 import swan.atom.core.constants.ISymbol
