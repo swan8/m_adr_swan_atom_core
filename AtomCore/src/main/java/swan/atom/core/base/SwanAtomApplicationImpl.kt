@@ -14,7 +14,10 @@ interface SwanAtomApplicationImpl {
 
     fun onCreate(application: Application) {
         reference = WeakReference(application.applicationContext)
+        applicationInit(application.applicationContext)
     }
+
+    fun applicationInit(context: Context): Unit
 
     fun getContext(): Context? = reference.get()
 
