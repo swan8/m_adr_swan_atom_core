@@ -20,7 +20,7 @@ ext {
             
             Ver_Goolge_Support              : "27.0.2",
             Ver_Goolge_Support_Constraint   : "1.0.2",
-            Ver_Goolge_Support_Multidex     : "1.0.0",
+            Ver_Goolge_Support_Multidex     : "1.0.1",
             Ver_Goolge_LiftCycle            : "1.1.0",
 
             Ver_Kotlin                      : "${kotlin_version}",

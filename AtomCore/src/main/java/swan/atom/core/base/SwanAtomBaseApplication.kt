@@ -1,13 +1,13 @@
 package swan.atom.core.base
 
-import android.app.Application
+import android.support.multidex.MultiDexApplication
 import kotlin.reflect.full.createInstance
 import kotlin.reflect.full.isSubclassOf
 
 /**
  * Created by stephen on 18-2-13.
  */
-abstract class SwanAtomBaseApplication: Application() {
+abstract class SwanAtomBaseApplication: MultiDexApplication() {
 
     companion object {
 

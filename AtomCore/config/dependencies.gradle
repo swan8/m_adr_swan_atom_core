@@ -4,6 +4,7 @@ dependencies {
     api "${google.supportCardView}"
     api "${google.supportConstraintLayout}"
     api "${google.supportDesign}"
+    api "${google.supportMultidex}"
 
     api "${google.LifeCycleRuntim}"
     api "${google.LifeCycleExtensions}"

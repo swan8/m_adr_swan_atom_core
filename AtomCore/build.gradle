@@ -17,6 +17,7 @@ android {
 
         minSdkVersion ext.basic.minSDK
         targetSdkVersion ext.basic.targetVersion
+        multiDexEnabled true
 
         versionCode 1
         versionName "0.0.5"
