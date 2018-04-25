@@ -13,7 +13,7 @@ ext {
 
     swan = [
 
-            AtomCore                        : 'com.github.swan8:m_adr_swan_atom_core:0.0.10'
+            AtomCore                        : 'com.github.swan8:m_adr_swan_atom_core:0.0.12'
     ]
 
     libVersions = [
@@ -22,6 +22,7 @@ ext {
             Ver_Goolge_Support_Constraint   : "1.0.2",
             Ver_Goolge_Support_Multidex     : "1.0.1",
             Ver_Goolge_LiftCycle            : "1.1.0",
+            Ver_Goolge_Room                 : "1.0.0",
 
             Ver_Kotlin                      : "${kotlin_version}",
 
@@ -46,6 +47,7 @@ ext {
             Ver_Nice_Fresco                 : "1.8.1",      // https://github.com/facebook/fresco
             Ver_Nice_photoDraweeView        : "1.1.3",      // https://github.com/ongakuer/PhotoDraweeView
             Ver_Nice_Iconify                : "2.2.2",      // https://github.com/JoanZapata/android-iconify
+            Ver_Nice_ImmersionBar           : "2.3.0",      // https://github.com/gyf-dev/ImmersionBar
     ]
 
     NewKotlin = [
@@ -71,6 +73,10 @@ ext {
             LifeCycleRuntim                 : "android.arch.lifecycle:runtime:${libVersions.Ver_Goolge_LiftCycle}",
             LifeCycleExtensions             : "android.arch.lifecycle:extensions:${libVersions.Ver_Goolge_LiftCycle}",
             LifeCycleCompiler               : "android.arch.lifecycle:compiler:${libVersions.Ver_Goolge_LiftCycle}",
+
+            RoomRuntime                     : "android.arch.persistence.room:runtime:${libVersions.Ver_Goolge_Room}",
+            RoomCompiler                    : "android.arch.persistence.room:compiler:${libVersions.Ver_Goolge_Room}",
+            RoomRxJava2                     : "android.arch.persistence.room:rxjava2:${libVersions.Ver_Goolge_Room}",
     ]
 
     square = [
@@ -112,5 +118,6 @@ ext {
             FrescoOkHttp                    : "com.facebook.fresco:imagepipeline-okhttp3:${libVersions.Ver_Nice_Fresco}",
             PhotoDraweeView                 : "me.relex:photodraweeview:${libVersions.Ver_Nice_photoDraweeView}",
             Iconify                         : "com.joanzapata.iconify:android-iconify:${libVersions.Ver_Nice_Iconify}",
+            ImmersionBar                    : "com.gyf.barlibrary:barlibrary:${libVersions.Ver_Nice_ImmersionBar}",
     ]
 }
