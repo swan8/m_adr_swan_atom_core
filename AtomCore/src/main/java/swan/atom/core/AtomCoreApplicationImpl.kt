@@ -18,4 +18,6 @@ object AtomCoreApplicationImpl : SwanAtomApplicationImpl {
         Timber.plant(Timber.DebugTree())
         Iconify.with(AtomCoreIconifyModule)
     }
+
+
 }
