@@ -22,6 +22,18 @@ enum class AtomCoreIconifyIcons constructor(character: Char) : Icon {
 
     ATOM_CORE_CLOCK('\ue6bb'),
 
+    ATOM_CORE_DIAMOND('\ue735'),
+
+    ATOM_CORE_SHOE('\ue728'),
+
+    ATOM_CORE_TOY('\ue6e1'),
+
+    ATOM_CORE_SETTING('\ue6ae'),
+
+    ATOM_CORE_INFORMATION('\ue6a4'),
+
+    ATOM_CORE_EARTH('\ue828'),
+
     ;
 
     var character: Char = 0.toChar()
