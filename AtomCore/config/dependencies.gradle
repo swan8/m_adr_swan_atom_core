@@ -1,3 +1,5 @@
+apply from: 'config/opensource_settings.gradle'
+
 dependencies {
 
     api "${google.supportAppcompatV7}"
@@ -29,6 +31,9 @@ dependencies {
     api "${mikePenz.Materialize}"
     api "${mikePenz.FastAdapter}"
     api "${mikePenz.FastAdapterCommons}"
+    api ("${mikePenz.MaterialDrawer}") {
+        transitive = true
+    }
 
     api "${ramotion.CardSlider}"
 
