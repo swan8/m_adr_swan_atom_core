@@ -17,6 +17,7 @@ dependencies {
     annotationProcessor "${google.RoomCompiler}"
 
     api "${NewKotlin.Kotlin}"
+    api "${NewKotlin.KotlinJre7}"
     api "${NewKotlin.KotlinReflect}"
 
     api "${square.Retrofit}"

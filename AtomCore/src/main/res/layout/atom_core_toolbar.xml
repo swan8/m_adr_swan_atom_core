@@ -1,23 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:id="@+id/cirrusCoreToolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/CirrusPrimaryWithWhite"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/atom_core_ic_cirrus_back"
+        app:popupTheme="@style/toolbar_pop_theme"
+        app:subtitleTextAppearance="@style/toolbar_subtitle_style"
+        app:titleTextAppearance="@style/toolbar_title_style">
 
         <TextView
-            android:id="@+id/sysRootToolbarCenterTitle"
+            android:id="@+id/toolbarCenterTitleView"
             style="@style/AtomCoreStyle.WhiteBigText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:maxLength="20"
-            android:maxLines="1" />
+            android:maxLines="1"
+            tools:text="Center" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
 
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/toolbarRightNavigationComponent1"
+                style="@style/AtomCoreStyle.WhiteNormalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/atom_core_resDimensGapNormal"
+                android:maxLines="2"
+                tools:text="C1" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/toolbarRightNavigationComponent2"
+                style="@style/AtomCoreStyle.WhiteNormalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/atom_core_resDimensGapBig"
+                android:layout_marginStart="@dimen/atom_core_resDimensGapBig"
+                android:lineSpacingExtra="@dimen/atom_core_resDimensGapNormal"
+                android:maxLines="2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:text="C2" />
+        </LinearLayout>
     </android.support.v7.widget.Toolbar>
-
 </android.support.constraint.ConstraintLayout>

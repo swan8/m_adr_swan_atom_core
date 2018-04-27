@@ -38,7 +38,8 @@ project.ext {
     NewKotlin = [
 
             Kotlin                          : "org.jetbrains.kotlin:kotlin-stdlib:${libVersions.Ver_Kotlin}",
-            KotlinReflect                   : "org.jetbrains.kotlin:kotlin-reflect:${libVersions.Ver_Kotlin}"
+            KotlinJre7                      : "org.jetbrains.kotlin:kotlin-stdlib-jre7:${libVersions.Ver_Kotlin}",
+            KotlinReflect                   : "org.jetbrains.kotlin:kotlin-reflect:${libVersions.Ver_Kotlin}",
     ]
 
     google = [
