@@ -1,4 +1,4 @@
-package swan.atom.core
+package swan.atom.core.ui
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
 import com.joanzapata.iconify.widget.IconTextView
+import swan.atom.core.AtomCoreApplicationImpl
+import swan.atom.core.R
 import java.lang.ref.WeakReference
 
 class Cirrus(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
@@ -162,6 +164,10 @@ class Cirrus(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs
     internal var cirrusRightComponent1: IconTextView? = null
 
     internal var cirrusRightComponent2: IconTextView? = null
+
+    fun getToolbar(): Toolbar? {
+        return this.cirrusToolbar
+    }
 
     override fun onFinishInflate() {
         super.onFinishInflate()

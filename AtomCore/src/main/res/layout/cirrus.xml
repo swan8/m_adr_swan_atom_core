@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<swan.atom.core.Cirrus xmlns:android="http://schemas.android.com/apk/res/android"
+<swan.atom.core.ui.Cirrus xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,11 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/cirrusToolbar"
+        style="@style/CirrusWhiteStyle"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         android:theme="@style/CirrusWhiteStyle"
-        style="@style/CirrusWhiteStyle"
         app:navigationIcon="@drawable/cirrus_ic_close_white_64dp">
 
         <android.support.v7.widget.AppCompatTextView
@@ -52,4 +52,4 @@
                 tools:text="C2" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
-</swan.atom.core.Cirrus>
+</swan.atom.core.ui.Cirrus>
