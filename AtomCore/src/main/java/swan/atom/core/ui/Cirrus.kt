@@ -1,5 +1,6 @@
 package swan.atom.core.ui
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.support.annotation.StringRes
@@ -72,6 +73,8 @@ class Cirrus(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs
             internal var cirrusMenu: Int? = null
 
             internal var cirrusMenuItemClickListener: WeakReference<Toolbar.OnMenuItemClickListener>? = null
+
+            internal var cirrusOverflowResId: Int? = null
 
             fun withCirrusNavigationIcon(resId: Int?): CirrusBuilder {
                 return resId?.let {
@@ -154,6 +157,11 @@ class Cirrus(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs
                 this.cirrusMenuItemClickListener = WeakReference<Toolbar.OnMenuItemClickListener>(listener)
                 return this
             }
+
+            fun withCirrusOverflowResId(resId: Int?): CirrusBuilder {
+                this.cirrusOverflowResId = resId
+                return this
+            }
         }
     }
 
@@ -184,6 +192,7 @@ class Cirrus(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs
                     .layoutCirrusTitle(it)
                     .layoutCirrusRightComponent(it)
                     .layoutCirrusMenu(it)
+                    .layoutCirrusOverflow(it)
         } ?: this
     }
 
@@ -246,19 +255,30 @@ class Cirrus(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs
         return this
     }
 
+    @SuppressLint("RestrictedApi")
     private fun layoutCirrusMenu(builder: CirrusBuilder): Cirrus {
         return cirrusToolbar?.let { cirrusToolbar ->
             builder.cirrusMenu?.let {
                 cirrusToolbar.inflateMenu(it)
                 cirrusToolbar.menu?.let { menu ->
                     if (menu is MenuBuilder) {
-//                        menu.setOptionalIconsVisible(true)
+                        menu.setOptionalIconsVisible(true)
                     }
                 }
             }
 
             builder.cirrusMenuItemClickListener?.let {
                 cirrusToolbar.setOnMenuItemClickListener(it.get())
+            }
+
+            this
+        } ?: this
+    }
+
+    private fun layoutCirrusOverflow(builder: CirrusBuilder): Cirrus {
+        return cirrusToolbar?.let { cirrusToolbar ->
+            builder.cirrusOverflowResId?.let {
+                cirrusToolbar.overflowIcon = AtomCoreApplicationImpl.getDrawable(it)
             }
 
             this

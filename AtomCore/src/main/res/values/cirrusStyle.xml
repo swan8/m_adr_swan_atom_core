@@ -4,15 +4,27 @@
     <style name="CirrusWhiteStyle">
         <!--<item name="contentInsetStart">0dp</item>-->
         <!--<item name="contentInsetStartWithNavigation">0dp</item>-->
-        <item name="popupTheme">@style/AtomCoreStyle.WhiteNormalText</item>
+        <item name="popupTheme">@style/CirrusWhiteStyle.PopupTheme</item>
         <item name="subtitleTextAppearance">@style/AtomCoreStyle.WhiteSmallText</item>
         <item name="titleTextAppearance">@style/AtomCoreStyle.WhiteHugeText</item>
         <item name="android:background">@color/colorPrimary</item>
         <item name="toolbarNavigationButtonStyle">@style/CirrusNavigationButtonStyle</item>
         <item name="android:actionButtonStyle">@style/CirrusActionButtonStyle</item>
         <item name="android:actionMenuTextColor">@android:color/white</item>
-        <item name="android:actionOverflowButtonStyle">@style/CirrusActionOverflowButtonStyle</item>
-        <item name="actionOverflowMenuStyle">@style/CirrusActionMenuOverflowStyle</item>
+
+    </style>
+
+    <!-- popupTheme -->
+    <style name="CirrusWhiteStyle.PopupTheme" parent="AtomCoreStyle.WhiteNormalText">
+        <item name="actionOverflowMenuStyle">@style/CirrusWhiteStyle.ActionMenuOverflowStyle</item>
+    </style>
+
+    <!-- Overflow Menu Style -->
+    <style name="CirrusWhiteStyle.ActionMenuOverflowStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownHorizontalOffset">-2dp</item>
+        <item name="android:dropDownVerticalOffset">4dp</item>
+        <item name="android:popupBackground">@color/colorPrimary</item>
     </style>
 
     <!-- toolbarNavigationButtonStyle -->
@@ -36,17 +48,5 @@
 
     <style name="CirrusActionOverflowButtonStyle" parent="Widget.AppCompat.Light.ActionButton.Overflow">
 
-    </style>
-
-    <!-- actionOverflowMenuStyle -->
-    <style name="CirrusActionMenuOverflowStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
-        <!-- 是否覆盖锚点，为true则盖住Toolbar -->
-        <item name="overlapAnchor">false</item>
-        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
-        <item name="android:dropDownHorizontalOffset">-2dp</item>
-        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
-        <item name="android:dropDownVerticalOffset">4dp</item>
-        <!-- 弹出层背景颜色 -->
-        <item name="android:popupBackground">@color/colorPrimary</item>
     </style>
 </resources>
