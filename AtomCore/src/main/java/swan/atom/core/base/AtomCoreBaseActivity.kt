@@ -1,7 +1,6 @@
 package swan.atom.core.base
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 
@@ -10,8 +9,8 @@ import android.view.View
  */
 open class AtomCoreBaseActivity: AppCompatActivity(), View.OnClickListener {
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
     }
 
     override fun onClick(v: View?) {
