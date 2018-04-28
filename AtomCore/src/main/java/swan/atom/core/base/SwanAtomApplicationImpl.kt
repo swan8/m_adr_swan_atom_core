@@ -2,6 +2,8 @@ package swan.atom.core.base
 
 import android.app.Application
 import android.content.Context
+import android.graphics.drawable.Drawable
+import android.support.annotation.DrawableRes
 import android.support.v4.content.ContextCompat
 import java.lang.ref.WeakReference
 
@@ -26,4 +28,12 @@ interface SwanAtomApplicationImpl {
     fun getString(resId: Int, vararg formatArgs: Any): String? = getContext()?.getString(resId, formatArgs)
 
     fun getDimens(id: Int): Int = getContext()?.resources?.getDimensionPixelOffset(id) ?: 0
+
+    fun getDrawable(@DrawableRes resId: Int?): Drawable? {
+        return resId?.let {
+            getContext()?.let {
+                ContextCompat.getDrawable(it, resId)
+            }
+        }
+    }
 }

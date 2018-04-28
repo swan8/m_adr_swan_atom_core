@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swan.atom.core.Cirrus xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/cirrusToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/CirrusWhiteStyle"
+        style="@style/CirrusWhiteStyle"
+        app:navigationIcon="@drawable/cirrus_ic_close_white_64dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cirrusCenterTitleView"
+            style="@style/AtomCoreStyle.WhiteBigText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLength="20"
+            android:maxLines="2" />
+
+        <LinearLayout
+            android:id="@+id/cirrusRightComponentContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/cirrusRightComponent1"
+                style="@style/AtomCoreStyle.WhiteSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/atom_core_resDimensGapBig"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/atom_core_resDimensGapSmall"
+                tools:text="C1" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/cirrusRightComponent2"
+                style="@style/AtomCoreStyle.WhiteSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/atom_core_resDimensGapBig"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/atom_core_resDimensGapSmall"
+                tools:text="C2" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+</swan.atom.core.Cirrus>
