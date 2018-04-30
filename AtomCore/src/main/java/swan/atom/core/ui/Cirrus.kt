@@ -259,6 +259,7 @@ class Cirrus(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs
     private fun layoutCirrusMenu(builder: CirrusBuilder): Cirrus {
         return cirrusToolbar?.let { cirrusToolbar ->
             builder.cirrusMenu?.let {
+                cirrusToolbar.menu?.clear()
                 cirrusToolbar.inflateMenu(it)
                 cirrusToolbar.menu?.let { menu ->
                     if (menu is MenuBuilder) {
