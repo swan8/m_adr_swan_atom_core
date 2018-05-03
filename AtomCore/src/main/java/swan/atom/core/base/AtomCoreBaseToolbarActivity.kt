@@ -7,7 +7,7 @@ import swan.atom.core.ui.Cirrus
  */
 open class AtomCoreBaseToolbarActivity: AtomCoreBaseActivity() {
 
-    val builder: Cirrus.Companion.CirrusBuilder = Cirrus.Companion.CirrusBuilder()
+    val builder: Cirrus.CirrusBuilder = Cirrus.CirrusBuilder()
 
     var cirrus: Cirrus? = null
 
